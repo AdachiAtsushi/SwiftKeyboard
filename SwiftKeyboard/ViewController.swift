@@ -10,11 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    // ボタン押下時のアクション定義
+    @IBAction func login(_ sender: Any) {
+        // 各テキストの値をラベルに渡す
+        userNameLabel.text = userNameTextField.text
+        passwordLabel.text = passWordTextField.text
+        
+        
+    }
+    
 
 }
 
